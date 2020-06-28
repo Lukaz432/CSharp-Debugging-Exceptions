@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.ClrBtn = new System.Windows.Forms.Button();
             this.CalcErrIntBtn = new System.Windows.Forms.Button();
+            this.EmptErrBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -140,11 +141,22 @@
             this.CalcErrIntBtn.UseVisualStyleBackColor = true;
             this.CalcErrIntBtn.Click += new System.EventHandler(this.CalcErrIntBtn_Click);
             // 
+            // EmptErrBtn
+            // 
+            this.EmptErrBtn.Location = new System.Drawing.Point(345, 286);
+            this.EmptErrBtn.Name = "EmptErrBtn";
+            this.EmptErrBtn.Size = new System.Drawing.Size(150, 23);
+            this.EmptErrBtn.TabIndex = 11;
+            this.EmptErrBtn.Text = "Calculate (empty field error)";
+            this.EmptErrBtn.UseVisualStyleBackColor = true;
+            this.EmptErrBtn.Click += new System.EventHandler(this.EmptErrBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 401);
+            this.Controls.Add(this.EmptErrBtn);
             this.Controls.Add(this.CalcErrIntBtn);
             this.Controls.Add(this.ClrBtn);
             this.Controls.Add(this.label4);
@@ -176,6 +188,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button ClrBtn;
         private System.Windows.Forms.Button CalcErrIntBtn;
+        private System.Windows.Forms.Button EmptErrBtn;
     }
 }
 

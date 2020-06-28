@@ -78,7 +78,34 @@ namespace CalcExeptionError
             } catch(Exception exc)
             {
                 MessageBox.Show("It seems that " + exc.Message, "Oh shoot! There appears to be an error of the type: " + exc.GetType(),
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void EmptErrBtn_Click(object sender, EventArgs e)
+        {
+            double subTotal = 0;
+            double tax = 0.0;
+            double grandTotal = 0.0;
+            string inputText = null;
+            string message = "Till next time!";
+            try
+            {
+                subTotal = Convert.ToDouble(SubTotBox.Text);
+                inputText = SubTotBox.Text;
+            }
+            catch(Exception exc)
+            {
+                if(inputText.Length == 0)
+                {
+                    MessageBox.Show("Field can not be empty! You must input data in the Sub Total field", "Error.",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            finally
+            {
+                MessageBox.Show("Thank you for using our calculator v1.1 demo!", "See you soon!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
