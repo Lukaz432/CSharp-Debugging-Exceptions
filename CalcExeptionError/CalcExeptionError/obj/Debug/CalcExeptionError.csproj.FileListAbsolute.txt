@@ -1,0 +1,10 @@
+C:\Users\NASA\source\repos\CalcExeptionError\CalcExeptionError\bin\Debug\CalcExeptionError.exe.config
+C:\Users\NASA\source\repos\CalcExeptionError\CalcExeptionError\bin\Debug\CalcExeptionError.exe
+C:\Users\NASA\source\repos\CalcExeptionError\CalcExeptionError\bin\Debug\CalcExeptionError.pdb
+C:\Users\NASA\source\repos\CalcExeptionError\CalcExeptionError\obj\Debug\CalcExeptionError.csprojAssemblyReference.cache
+C:\Users\NASA\source\repos\CalcExeptionError\CalcExeptionError\obj\Debug\CalcExeptionError.Form1.resources
+C:\Users\NASA\source\repos\CalcExeptionError\CalcExeptionError\obj\Debug\CalcExeptionError.Properties.Resources.resources
+C:\Users\NASA\source\repos\CalcExeptionError\CalcExeptionError\obj\Debug\CalcExeptionError.csproj.GenerateResource.cache
+C:\Users\NASA\source\repos\CalcExeptionError\CalcExeptionError\obj\Debug\CalcExeptionError.csproj.CoreCompileInputs.cache
+C:\Users\NASA\source\repos\CalcExeptionError\CalcExeptionError\obj\Debug\CalcExeptionError.exe
+C:\Users\NASA\source\repos\CalcExeptionError\CalcExeptionError\obj\Debug\CalcExeptionError.pdb
