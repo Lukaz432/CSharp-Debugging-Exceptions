@@ -57,6 +57,10 @@ namespace CalcExeptionError
                 MessageBox.Show("It seems that " + exc.Message, "Oh shoot! There appears to be an error of the type: " + exc.GetType(),
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            tax = subTotal * 0.150;
+            grandTotal = subTotal + tax;
+            TaxBox.Text = tax.ToString();
+            GranTotBox.Text = grandTotal.ToString();
         }
     }
 }
