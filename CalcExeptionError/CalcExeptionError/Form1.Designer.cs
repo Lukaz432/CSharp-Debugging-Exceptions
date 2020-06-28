@@ -38,6 +38,7 @@
             this.CalcErrBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.ClrBtn = new System.Windows.Forms.Button();
+            this.CalcErrIntBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -129,11 +130,22 @@
             this.ClrBtn.UseVisualStyleBackColor = true;
             this.ClrBtn.Click += new System.EventHandler(this.ClrBtn_Click);
             // 
+            // CalcErrIntBtn
+            // 
+            this.CalcErrIntBtn.Location = new System.Drawing.Point(345, 233);
+            this.CalcErrIntBtn.Name = "CalcErrIntBtn";
+            this.CalcErrIntBtn.Size = new System.Drawing.Size(120, 23);
+            this.CalcErrIntBtn.TabIndex = 10;
+            this.CalcErrIntBtn.Text = "Calculate (int error)";
+            this.CalcErrIntBtn.UseVisualStyleBackColor = true;
+            this.CalcErrIntBtn.Click += new System.EventHandler(this.CalcErrIntBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 401);
+            this.Controls.Add(this.CalcErrIntBtn);
             this.Controls.Add(this.ClrBtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.CalcErrBtn);
@@ -163,6 +175,7 @@
         private System.Windows.Forms.Button CalcErrBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button ClrBtn;
+        private System.Windows.Forms.Button CalcErrIntBtn;
     }
 }
 

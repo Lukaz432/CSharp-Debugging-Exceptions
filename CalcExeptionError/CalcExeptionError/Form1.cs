@@ -62,5 +62,24 @@ namespace CalcExeptionError
             TaxBox.Text = tax.ToString();
             GranTotBox.Text = grandTotal.ToString();
         }
+
+        private void CalcErrIntBtn_Click(object sender, EventArgs e)
+        {
+            int subTotal = 0;
+            double tax = 0.0;
+            double grandTotal = 0.0;
+            try
+            {
+                subTotal = Convert.ToInt32(SubTotBox.Text);
+            } catch(OverflowException exc)
+            {
+                MessageBox.Show("Try a smaller number. " + exc.Message, "The number input is either too small or too large for " + exc.GetType(),
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } catch(Exception exc)
+            {
+                MessageBox.Show("It seems that " + exc.Message, "Oh shoot! There appears to be an error of the type: " + exc.GetType(),
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
