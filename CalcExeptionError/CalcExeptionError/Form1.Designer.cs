@@ -40,6 +40,7 @@
             this.ClrBtn = new System.Windows.Forms.Button();
             this.CalcErrIntBtn = new System.Windows.Forms.Button();
             this.EmptErrBtn = new System.Windows.Forms.Button();
+            this.CalcUnkwnErrBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -151,11 +152,22 @@
             this.EmptErrBtn.UseVisualStyleBackColor = true;
             this.EmptErrBtn.Click += new System.EventHandler(this.EmptErrBtn_Click);
             // 
+            // CalcUnkwnErrBtn
+            // 
+            this.CalcUnkwnErrBtn.Location = new System.Drawing.Point(346, 337);
+            this.CalcUnkwnErrBtn.Name = "CalcUnkwnErrBtn";
+            this.CalcUnkwnErrBtn.Size = new System.Drawing.Size(150, 23);
+            this.CalcUnkwnErrBtn.TabIndex = 12;
+            this.CalcUnkwnErrBtn.Text = "Calculate (unknown error)";
+            this.CalcUnkwnErrBtn.UseVisualStyleBackColor = true;
+            this.CalcUnkwnErrBtn.Click += new System.EventHandler(this.CalcUnkwnErrBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 401);
+            this.Controls.Add(this.CalcUnkwnErrBtn);
             this.Controls.Add(this.EmptErrBtn);
             this.Controls.Add(this.CalcErrIntBtn);
             this.Controls.Add(this.ClrBtn);
@@ -189,6 +201,7 @@
         private System.Windows.Forms.Button ClrBtn;
         private System.Windows.Forms.Button CalcErrIntBtn;
         private System.Windows.Forms.Button EmptErrBtn;
+        private System.Windows.Forms.Button CalcUnkwnErrBtn;
     }
 }
 
