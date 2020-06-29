@@ -41,6 +41,15 @@
             this.CalcErrIntBtn = new System.Windows.Forms.Button();
             this.EmptErrBtn = new System.Windows.Forms.Button();
             this.CalcUnkwnErrBtn = new System.Windows.Forms.Button();
+            this.SubNTaxExcErrBtn = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TaxBoxExcBox = new System.Windows.Forms.TextBox();
+            this.GranTotExcBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.SubTotExcBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -64,11 +73,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 193);
+            this.label3.Location = new System.Drawing.Point(41, 193);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.Size = new System.Drawing.Size(134, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Grand Total:";
+            this.label3.Text = "Grand Total (including tax):";
             // 
             // SubTotBox
             // 
@@ -94,7 +103,7 @@
             // 
             // CalcBtn
             // 
-            this.CalcBtn.Location = new System.Drawing.Point(345, 89);
+            this.CalcBtn.Location = new System.Drawing.Point(359, 58);
             this.CalcBtn.Name = "CalcBtn";
             this.CalcBtn.Size = new System.Drawing.Size(75, 23);
             this.CalcBtn.TabIndex = 6;
@@ -104,7 +113,7 @@
             // 
             // CalcErrBtn
             // 
-            this.CalcErrBtn.Location = new System.Drawing.Point(345, 188);
+            this.CalcErrBtn.Location = new System.Drawing.Point(359, 116);
             this.CalcErrBtn.Name = "CalcErrBtn";
             this.CalcErrBtn.Size = new System.Drawing.Size(120, 23);
             this.CalcErrBtn.TabIndex = 7;
@@ -115,7 +124,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(90, 38);
+            this.label4.Location = new System.Drawing.Point(100, 28);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(320, 13);
             this.label4.TabIndex = 8;
@@ -124,7 +133,7 @@
             // 
             // ClrBtn
             // 
-            this.ClrBtn.Location = new System.Drawing.Point(345, 142);
+            this.ClrBtn.Location = new System.Drawing.Point(359, 87);
             this.ClrBtn.Name = "ClrBtn";
             this.ClrBtn.Size = new System.Drawing.Size(75, 23);
             this.ClrBtn.TabIndex = 9;
@@ -134,7 +143,7 @@
             // 
             // CalcErrIntBtn
             // 
-            this.CalcErrIntBtn.Location = new System.Drawing.Point(345, 233);
+            this.CalcErrIntBtn.Location = new System.Drawing.Point(359, 145);
             this.CalcErrIntBtn.Name = "CalcErrIntBtn";
             this.CalcErrIntBtn.Size = new System.Drawing.Size(120, 23);
             this.CalcErrIntBtn.TabIndex = 10;
@@ -144,7 +153,7 @@
             // 
             // EmptErrBtn
             // 
-            this.EmptErrBtn.Location = new System.Drawing.Point(345, 286);
+            this.EmptErrBtn.Location = new System.Drawing.Point(359, 174);
             this.EmptErrBtn.Name = "EmptErrBtn";
             this.EmptErrBtn.Size = new System.Drawing.Size(150, 23);
             this.EmptErrBtn.TabIndex = 11;
@@ -154,7 +163,7 @@
             // 
             // CalcUnkwnErrBtn
             // 
-            this.CalcUnkwnErrBtn.Location = new System.Drawing.Point(346, 337);
+            this.CalcUnkwnErrBtn.Location = new System.Drawing.Point(359, 203);
             this.CalcUnkwnErrBtn.Name = "CalcUnkwnErrBtn";
             this.CalcUnkwnErrBtn.Size = new System.Drawing.Size(150, 23);
             this.CalcUnkwnErrBtn.TabIndex = 12;
@@ -162,11 +171,99 @@
             this.CalcUnkwnErrBtn.UseVisualStyleBackColor = true;
             this.CalcUnkwnErrBtn.Click += new System.EventHandler(this.CalcUnkwnErrBtn_Click);
             // 
+            // SubNTaxExcErrBtn
+            // 
+            this.SubNTaxExcErrBtn.Location = new System.Drawing.Point(359, 251);
+            this.SubNTaxExcErrBtn.Name = "SubNTaxExcErrBtn";
+            this.SubNTaxExcErrBtn.Size = new System.Drawing.Size(118, 56);
+            this.SubNTaxExcErrBtn.TabIndex = 13;
+            this.SubNTaxExcErrBtn.Text = "Calculate (0 subTot, 0 tax rate exception error)";
+            this.SubNTaxExcErrBtn.UseVisualStyleBackColor = true;
+            this.SubNTaxExcErrBtn.Click += new System.EventHandler(this.SubNTaxExcErrBtn_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 229);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(532, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "---------------------------------------------------------------------------------" +
+    "--------------------------------------------------------------------------------" +
+    "--------------";
+            // 
+            // TaxBoxExcBox
+            // 
+            this.TaxBoxExcBox.Location = new System.Drawing.Point(181, 291);
+            this.TaxBoxExcBox.Name = "TaxBoxExcBox";
+            this.TaxBoxExcBox.Size = new System.Drawing.Size(100, 20);
+            this.TaxBoxExcBox.TabIndex = 16;
+            // 
+            // GranTotExcBox
+            // 
+            this.GranTotExcBox.Location = new System.Drawing.Point(181, 329);
+            this.GranTotExcBox.Name = "GranTotExcBox";
+            this.GranTotExcBox.Size = new System.Drawing.Size(100, 20);
+            this.GranTotExcBox.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(78, 298);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 13);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Tax Rate(%):";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(41, 332);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(134, 13);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Grand Total (including tax):";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(78, 259);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Subtotal:";
+            // 
+            // SubTotExcBox
+            // 
+            this.SubTotExcBox.Location = new System.Drawing.Point(181, 251);
+            this.SubTotExcBox.Name = "SubTotExcBox";
+            this.SubTotExcBox.Size = new System.Drawing.Size(100, 20);
+            this.SubTotExcBox.TabIndex = 22;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(359, 322);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Clear Fields";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 401);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.SubTotExcBox);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.GranTotExcBox);
+            this.Controls.Add(this.TaxBoxExcBox);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.SubNTaxExcErrBtn);
             this.Controls.Add(this.CalcUnkwnErrBtn);
             this.Controls.Add(this.EmptErrBtn);
             this.Controls.Add(this.CalcErrIntBtn);
@@ -202,6 +299,15 @@
         private System.Windows.Forms.Button CalcErrIntBtn;
         private System.Windows.Forms.Button EmptErrBtn;
         private System.Windows.Forms.Button CalcUnkwnErrBtn;
+        private System.Windows.Forms.Button SubNTaxExcErrBtn;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TaxBoxExcBox;
+        private System.Windows.Forms.TextBox GranTotExcBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox SubTotExcBox;
+        private System.Windows.Forms.Button button1;
     }
 }
 

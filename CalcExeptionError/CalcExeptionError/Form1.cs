@@ -139,5 +139,42 @@ namespace CalcExeptionError
                 }
             }
         }
+
+        private void SubNTaxExcErrBtn_Click(object sender, EventArgs e)
+        {
+            double subTotal = 0.0;
+            double taxRate = 0.0;
+            double tax;
+            double total;
+            try
+            {
+                subTotal = Double.Parse(SubTotExcBox.Text);
+                taxRate = Double.Parse(TaxBoxExcBox.Text);
+            }
+            // Exception condition when
+            catch (Exception exc) when (subTotal > 0)
+            {
+                MessageBox.Show("Error 404. Tax input is not valid.");
+                subTotal = 0.0;
+                taxRate = 0.0;
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Error 404. (Subtotal) " + exc.Message);
+                subTotal = 0.0;
+                taxRate = 0.0;
+            }
+            tax = subTotal * taxRate;
+            total = subTotal + tax;
+            GranTotExcBox.Text = total.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SubTotExcBox.Text = "";
+            TaxBoxExcBox.Text = "";
+            GranTotExcBox.Text = "";
+
+        }
     }
 }
